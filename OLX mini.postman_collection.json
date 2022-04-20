@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "13f97eba-c20b-4414-b65c-d0302f5b1e3d",
+		"name": "OLX mini",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fname\": \"Sunil\",\r\n    \"lname\": \"kamble\",\r\n    \"email\": \"sunil.kamble@forcepoint.com\",\r\n    \"pwd\": \"Admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/userlogin?email=rachna.jaju@forcepoint.com&pwd=Admin@123",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/userlogin?email=rachna.jaju@forcepoint.com&pwd=Admin@123",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"userlogin"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "rachna.jaju@forcepoint.com"
+						},
+						{
+							"key": "pwd",
+							"value": "Admin@123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/createeditproduct",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": \"10\",\r\n    \"prod_name\": \"\",\r\n    \"quantity_available\": \"10000\",\r\n    \"supplier_email\": \"sunil.kamble@forcepoint.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/createeditproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"createeditproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/deleteproduct?email=sunil.kamble@forcepoint.com&item_id=4",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/deleteproduct?email=sunil.kamble@forcepoint.com&item_id=4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"deleteproduct"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sunil.kamble@forcepoint.com"
+						},
+						{
+							"key": "item_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/getalliproducts?email=sunil.kamble@forcepoint.com&tab=market",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/getalliproducts?email=sunil.kamble@forcepoint.com&tab=market",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getalliproducts"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sunil.kamble@forcepoint.com"
+						},
+						{
+							"key": "tab",
+							"value": "market"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/orderitem",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sunil.kamble@forcepoint.com\",\r\n    \"item_id\": \"2\",\r\n    \"order_status\": \"ordered\",\r\n    \"quantity\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/orderitem",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"orderitem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/getordereditems?email=sunil.kamble@forcepoint.com",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/getordereditems?email=sunil.kamble@forcepoint.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getordereditems"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sunil.kamble@forcepoint.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fname\": \"sunil\",\r\n    \"lname\": \"kamble\",\r\n    \"email\": \"sunil.kamble@forcepoint.com\",\r\n    \"pwd\": \"Admin@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://8x12yn4aj1.execute-api.us-east-1.amazonaws.com/dev/api/register",
+					"protocol": "https",
+					"host": [
+						"8x12yn4aj1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://8x12yn4aj1.execute-api.us-east-1.amazonaws.com/dev/api/userlogin?email=mahesh.walke@forcepoint.com&pwd=Admin@123",
+					"protocol": "https",
+					"host": [
+						"8x12yn4aj1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"userlogin"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mahesh.walke@forcepoint.com"
+						},
+						{
+							"key": "pwd",
+							"value": "Admin@123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Edit Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": \"10\",\r\n    \"prod_name\": \"\",\r\n    \"quantity_available\": \"10000\",\r\n    \"supplier_email\": \"sunil.kamble@forcepoint.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://8x12yn4aj1.execute-api.us-east-1.amazonaws.com/dev/api/createeditproduct",
+					"protocol": "https",
+					"host": [
+						"8x12yn4aj1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"createeditproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://8x12yn4aj1.execute-api.us-east-1.amazonaws.com/dev/api/deleteproduct?email=sunil.kamble@forcepoint.com&item_id=4",
+					"protocol": "https",
+					"host": [
+						"8x12yn4aj1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"deleteproduct"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sunil.kamble@forcepoint.com"
+						},
+						{
+							"key": "item_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Product - Published/Market",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://8x12yn4aj1.execute-api.us-east-1.amazonaws.com/dev/api/getalliproducts?email=sunil.kamble@forcepoint.com&tab=published",
+					"protocol": "https",
+					"host": [
+						"8x12yn4aj1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"getalliproducts"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sunil.kamble@forcepoint.com"
+						},
+						{
+							"key": "tab",
+							"value": "published"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sunil.kamble@forcepoint.com\",\r\n    \"item_id\": \"2\",\r\n    \"order_status\": \"ordered\",\r\n    \"quantity\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://8x12yn4aj1.execute-api.us-east-1.amazonaws.com/dev/api/orderitem",
+					"protocol": "https",
+					"host": [
+						"8x12yn4aj1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"orderitem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ordered Items",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://8x12yn4aj1.execute-api.us-east-1.amazonaws.com/dev/api/getordereditems?email=sunil.kamble@forcepoint.com",
+					"protocol": "https",
+					"host": [
+						"8x12yn4aj1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"api",
+						"getordereditems"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sunil.kamble@forcepoint.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
